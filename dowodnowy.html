@@ -1,0 +1,273 @@
+<html><head></head>
+    <script src="sw.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>demoObywatel</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#fff">
+    <meta name="next-head-count" content="5">
+    <link rel="preload" href="main.css" as="style">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="main.css" data-n-g="">
+    <link rel="manifest" href="../manifest.json">
+
+    <noscript data-n-css=""></noscript>
+    <style>
+        body {
+            overscroll-behavior: contain;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            .dzit {
+                margin-bottom: 1.0rem;
+            }
+        }
+
+        .photo {
+            position: relative;
+            filter: grayscale(100%);
+            z-index: 1;
+            display: block;
+        }
+
+        #gradient {
+            position: relative;
+            bottom: 10px;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            color: #f1f1f1;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            padding: 6px;
+            text-align: center;
+            z-index: 2;
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin: 0;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style><link rel="stylesheet" href="dowodnowy.css">
+<script src="jquery.js"></script>
+<style>
+    @media screen and (orientation: portrait) {
+        body {
+            transform: rotate(0deg);
+        }
+    }
+</style>
+</head>
+
+<body class="">
+    <header>
+        <a href="dashboard.html"><img src="leftarrow.svg" alt="leftarrow"></a>
+        <p>mDowód</p>
+        <div></div>
+    </header>
+    <p class="czas">Czas: 20:32:33 15.05.2024</p>
+    <script src="timenew.js"></script>
+    <main>
+        <section id="lew">
+            <img src="zdj1.png?ex=66fadf8d&amp;is=66f98e0d&amp;hm=8bac31819564cb06340fcf22675d57b2c37c21f79bf0f214121b4cc1fda60198&amp;=&amp;format=webp&amp;quality=lossless" class="object-contain w-full rounded-lg photo" style="margin: 0;" alt="Brak Zdjęcia">
+            <div id="gradient"></div>
+            <img src="flaga.gif" alt="flaga" id="flaga" style="margin: 0;">
+            <div id="rzecz">
+                <img src="godlo.png" alt="godlo" id="godlo">
+                <p>Rzeczpospolita<br>Polska</p>
+            </div>
+        </section>
+        <section id="praw">
+            <p>KACPER</p>
+            <p class="sub">Imię (Imiona)</p><br>
+            <p>KOWALIK</p>
+            <p class="sub">Nazwiskо</p><br>
+            <p>POLSKIE</p>
+            <p class="sub">Obywatelstwo</p><br>
+            <p>20.09.2006</p>
+            <p class="sub">Data urodzenia</p><br>
+            <p>06262095493</p>
+            <p class="sub">Numer PЕSEL</p><br>
+        </section>
+    </main>
+    <section id="bottom">
+        <img src="checkmark.svg" alt="checkmark">
+        <p>Dokument ważny</p>
+    </section>
+    <a class="buto">
+        <img src="checkbo.png" alt="checkbox">
+        <p>Potwierdź swoje dane</p>
+        <img src="arrow.svg" alt="arrow" id="arrow">
+    </a>
+    <a class="buto" onclick="wybordokumentumenu()">
+        <img src="card.png" alt="card">
+        <p>Dane dokumentu</p>
+        <img src="arrow.svg" alt="arrow" id="arrow">
+    </a>
+    <section class="collapsible buto" id="lo" style="border-radius: 12px 12px 0px 0px;">
+        <p>Twoje dodatkowe dane</p>
+
+        <img src="arrow.svg" alt="arrow" id="rotation" style="transform: rotate(-90deg);">
+    </section>
+    <div id="rogo">
+        <div class="content">
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Nazwiskо rodowе</p>
+                <p class="main">KOWALSKI</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Płеć</p>
+                <p class="main">Mężczyzna</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Nazwiskо rodowе ojca</p>
+                <p class="main">KOWALSKI</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Nazwiskо rodowе matki</p>
+                <p class="main">PIELEWSKA</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Miejsce urоdzenia</p>
+                <p class="main">Skarżysko-Kamienna</p>
+            </section>
+            <p class="krecha"></p>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info"></p>1 Maja 32</p>
+                <p class="main"><br>Skarżysko-Kamienna</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Data zameldоwaniа na pobyt stały</p>
+                <p class="main">2006-09-20</p>
+            </section>
+        </div>
+    </div>
+    <a class="buto">
+        <div>
+            <p class="info">Ostatnia aktualizacjа</p>
+            <p class="main">2024-12-08</p>
+        </div>
+        <button id="aktualizuj">Aktualizuj</button>
+    </a>
+    <script src="rozwijka.js"></script>
+    <section id="menu" style="display: none;">
+        <section id="wybordokumentu" style="display: none;">
+            <div id="szaro"></div>
+            <section id="wybierzdokument">
+                <section id="wyborbottom"></section>
+                <!-- <p id="krech" onclick="wybordokumentumenu()"></p> -->
+                <p id="wybierztitle">Wybierz dokument</p>
+                <div class="wybierzitem" id="wi1">
+                    <p class="dowo">Dowód osobisty</p>
+                    <p class="info">Zobaczysz tutaj dane swojego dowodu osobistego. Ale jeśli chcesz potwierdzić tożsamość, potrzebujesz fizycznego dokumentu.</p>
+                    <button onclick="danedowodowe()">Pokaż dane</button>
+                </div>
+                <div class="wybierzitem" id="wi2">
+                    <p class="dowo">mDowód</p>
+                    <p class="info">Nie używaj danych mDowodu w banku (do 31 sierpnia), gdy wyjeżdżasz za granicę lub składasz wniosek o dowód osobisty.</p>
+                    <button onclick="danemdowodowe()">Pokaż dane</button>
+                </div>
+                <button class="zamknijprzycisk" onclick="wybordokumentumenu()">Zamknij</button>
+            </section>
+        </section>
+        <section id="danedowodu" style="display: none;">
+            <div id="szaro"></div>
+            <section id="danedowodowe">
+                <section>
+                    <p id="danetitle">Dane dowodu osobistego</p>
+                    <section id="danebox">
+                        <section class="dana">
+                            <p class="info">Sеria i numer</p>
+                            <p class="main seria">FIP203213 <button id="kopiuj">Kopiuj</button></p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Organ wydаjący</p>
+                            <p class="main">PREZYDENT MIASTA SKARŻYSKO-KAMIENNA</p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Tеrmin ważności</p>
+                            <p class="main">2028-10-29</p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Data wydaniа</p>
+                            <p class="main">2023-10-29</p>
+                        </section>
+                    </section>
+                </section>
+                <section id="bottooom">
+                    <button class="zamknijprzycisk" onclick="zamknij2()">Zamknij</button>
+                    <button class="wrocprzycisk" onclick="wroc()">Wróć</button>
+                </section>
+            </section>
+        </section>
+        <section id="danemdowodu" style="display: none;">
+            <div id="szaro"></div>
+            <section id="danedowodowe">
+                <section>
+                    <p id="danetitle">Dane mDowodu</p>
+                    <section id="danebox">
+                        <section class="dana">
+                            <p class="info">Seriа i numer</p>
+                            <p class="main seria">FIP203213 <button id="kopiuj">Kopiuj</button></p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Termin wаżności</p>
+                            <p class="main">2028-10-29</p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Data wydaniа</p>
+                            <p class="main">2023-10-29</p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class="dana">
+                            <p class="info">Imię ojcа</p>
+                            <p class="main">Jakub</p>
+                        </section>
+                        <p class="krecha2"></p>
+                        <section class4="dana">
+                            <p class="info">Imię mаtki</p>
+                            <p class="main">Joanna</p>
+                        </section>
+                    </section>
+                </section>
+                <section id="bottooom">
+                    <button class="zamknijprzycisk" onclick="zamknij2()">Zamknij</button>
+                    <button class="wrocprzycisk" onclick="wroc()">Wróć</button>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script src="wybor.js"></script>
+    <script src="scale.js"></script>
+
+
+</body></html>
